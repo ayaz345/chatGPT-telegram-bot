@@ -95,9 +95,7 @@ def get_last_message():
     try:
         code_blocks = prose.query_selector_all("pre")
     except Exception as e:
-        response = 'Server probably disconnected, try running /reload'
-        return response
-
+        return 'Server probably disconnected, try running /reload'
     if len(code_blocks) > 0:
         # get all children of prose and add them one by one to respons
         response = ""
